@@ -1,2 +1,2 @@
 # MSA-Ecommerce-App
-About practice MSA application
+About practice MSA Application
