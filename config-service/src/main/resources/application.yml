@@ -1,0 +1,29 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          # Local Git Repo
+          uri: file:///Users/chaeminlee/Documents/Repository/MSA-Ecommerce-App-Config
+          # Remote Git Repo
+#          uri: https://github.com/CokeLee777/MSA-Ecommerce-App-Config
+#          username: id
+#          password: password
+          # Native file system
+#        native:
+#          search-locations: file:///Users/chaeminlee/Documents/Repository/MSA-Ecommerce-App-Config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh

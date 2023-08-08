@@ -26,6 +26,7 @@ public class WebSecurity {
         http.csrf().disable();
         http.headers().frameOptions().disable();
 //        http.authorizeRequests().antMatchers("/users/**").permitAll();
+        http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/**")
                 .permitAll()
                 .and()

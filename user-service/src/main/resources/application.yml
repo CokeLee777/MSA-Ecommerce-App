@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: user-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   h2:
     console:
       enabled: true
@@ -11,9 +16,9 @@ spring:
       settings:
         web-allow-others: true
       path: /h2-console
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:mem:testdb
 
 eureka:
   client:
@@ -33,6 +38,16 @@ logging:
   level:
     com.example.userservice: DEBUG
 
-token:
-  expiration_time: 86400000
-  secret: usertokenusertokenusertokenusertokenusertokenusertoken
+# spring boot actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        # refresh: 현재 마이크로서비스에 있는 config server에서 가져와야할 정보를 refresh
+        include: refresh, health, beans, busrefresh
+
+#token:
+#  expiration_time: 86400000
+#  secret: usertokenusertokenusertokenusertokenusertokenusertoken
+
+
