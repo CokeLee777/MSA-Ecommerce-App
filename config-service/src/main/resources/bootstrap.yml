@@ -1,7 +1,7 @@
 # 대칭키 설정
 encrypt:
-#  key: abcdefghijklmnopqrstuvwxyz0123456789
-  key-store:
-    location: file://${user.home}/Documents/Repository/MSA-Ecommerce-App/keystore/apiEncryptionKey.jks
-    password: 1q2w3e4r
-    alias: apiEncryptionKey
+  key: abcdefghijklmnopqrstuvwxyz0123456789
+#  key-store:
+#    location: file://${user.home}/Documents/Repository/MSA-Ecommerce-App/config-service/apiEncrytionKey.jks
+#    password: 1q2w3e4r
+#    alias: apiEncryptionKey
