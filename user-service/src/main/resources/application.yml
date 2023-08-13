@@ -16,6 +16,12 @@ spring:
       settings:
         web-allow-others: true
       path: /h2-console
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0
 #  datasource:
 #    driver-class-name: org.h2.Driver
 #    url: jdbc:h2:mem:testdb
@@ -45,7 +51,7 @@ management:
     web:
       exposure:
         # refresh: 현재 마이크로서비스에 있는 config server에서 가져와야할 정보를 refresh
-        include: refresh, health, beans, busrefresh
+        include: refresh, health, beans, busrefresh, info, prometheus, metrics
 
 #token:
 #  expiration_time: 86400000
