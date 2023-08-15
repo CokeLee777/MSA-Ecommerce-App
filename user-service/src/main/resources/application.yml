@@ -25,6 +25,13 @@ spring:
 #  datasource:
 #    driver-class-name: org.h2.Driver
 #    url: jdbc:h2:mem:testdb
+  cloud:
+    config:
+      # 현재 서버의 설정정보 파일에 들어갈 config server의 파일 이름(ex. ecommerce.yml)
+      name: user-service
+  config:
+    # config service 정보
+    import: optional:configserver:http://127.0.0.1:8888
 
 eureka:
   client:

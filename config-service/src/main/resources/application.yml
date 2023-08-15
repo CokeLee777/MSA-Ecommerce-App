@@ -8,11 +8,11 @@ spring:
       server:
         git:
           # Local Git Repo
-          uri: file:///Users/chaeminlee/Documents/Repository/MSA-Ecommerce-App-Config
+#          uri: file:///Users/chaeminlee/Documents/Repository/MSA-Ecommerce-App-Config
           # Remote Git Repo
-#          uri: https://github.com/CokeLee777/MSA-Ecommerce-App-Config
-#          username: id
-#          password: password
+          uri: https://github.com/CokeLee777/MSA-Ecommerce-App-Config
+          username: id
+          password: password
           # Native file system
 #        native:
 #          search-locations: file:///Users/chaeminlee/Documents/Repository/MSA-Ecommerce-App-Config
